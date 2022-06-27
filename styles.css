@@ -1,0 +1,232 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button,
+input {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #226ED8;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+  padding: 20px 160px;
+
+  align-items: center;
+}
+
+.header h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+
+  color: #FAFAFA;
+}
+
+.header .switcher {
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.meio {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 120px 160px;
+}
+
+.meio h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  color: #141414;
+}
+
+.meio .tasks {
+  width: 293px;
+  height: 337px;
+
+  background: #EEEEEE;
+  border-radius: 10px;
+
+  margin-top: 8px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.meio .task {
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  padding: 12px;
+}
+
+.task h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+
+  display: flex;
+  align-items: center;
+
+  color: #141414;
+}
+
+.meio .add {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meio .add img {
+  cursor: pointer;
+}
+
+.task .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task .title img {
+  width: 4px;
+  height: 12px;
+
+  cursor: pointer;
+}
+
+.task .ler {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+.task .ler div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task .ler .prox {
+  width: 20px;
+  height: 20px;
+}
+
+.task .ler .setas img {
+  width: 20px;
+  height: 20px;
+}
+
+.task .ler h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+
+  display: flex;
+  align-items: center;
+
+  color: #141414;
+}
+
+.title-feito{
+  text-decoration-line: line-through;
+}
+
+.task .ler img {
+  width: 6px;
+  height: 4px;
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #114FA7;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+footer span {
+  font-weight: 600;
+}
+
+footer .trainee {
+  margin: 15px 0;
+  margin-left: 160px;
+}
+
+footer div {
+  display: flex;
+  margin-right: 160px;
+  gap: 5px;
+}
+
+footer img {
+  width: 16px;
+  height: 16px;
+}
