@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>uTask 3.0</title>
 
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -21,107 +27,85 @@
       <img class="switcher" src="/images/switcher.png" alt="Trocar Tema" />
     </section>
 
-    <section class="meio">
-      <div class="container">
-        <div class="add">
-          <h1>A fazer</h1>
-          <img src="/images/adicionar.png" alt="" />
-        </div>
-        <div class="tasks">
-          <div class="task">
-            <div class="title">
-              <h1>Pagar conta de luz</h1>
-              <img src="/images/more_vert.png" alt="Mais" />
-            </div>
-            <div class="ler">
-              <div>
-                <h1>Ler descrição</h1>
-                <img src="/images/seta.png" alt="" />
-              </div>
-              <img class="prox" src="/images/proximo.png" alt="" />
-            </div>
-          </div>
-          <div class="task">
-            <div class="title">
-              <h1>Fazer compras no mercado</h1>
-              <img src="/images/more_vert.png" alt="Mais" />
-            </div>
-            <div class="ler">
-              <div>
-                <h1>Ler descrição</h1>
-                <img src="/images/seta.png" alt="" />
-              </div>
-              <img class="prox" src="/images/proximo.png" alt="" />
-            </div>
-          </div>
-          <div class="task">
-            <div class="title">
-              <h1>Fazer manicure</h1>
-              <img src="/images/more_vert.png" alt="Mais" />
-            </div>
-            <div class="ler">
-              <div>
-                <h1>Ler descrição</h1>
-                <img src="/images/seta.png" alt="" />
-              </div>
-              <img class="prox" src="/images/proximo.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <h1>Em andamento</h1>
-        <div class="tasks">
-          <div class="task">
-            <div class="title">
-              <h1>Fazer manicure</h1>
-              <img src="/images/more_vert.png" alt="Mais" />
-            </div>
-            <div class="ler">
-              <div>
-                <h1>Ler descrição</h1>
-                <img src="/images/seta.png" alt="" />
-              </div>
-              <div class="setas">
-                <img class="ant" src="/images/voltar.png" alt="" />
-                <img class="prox" src="/images/proximo.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <h1>Feito</h1>
-        <div class="tasks">
-          <div class="task">
-            <div class="title">
-              <h1 class="title-feito">Fazer manicure</h1>
-              <img src="/images/more_vert.png" alt="Mais" />
-            </div>
-            <div class="ler">
-              <div>
-                <h1>Ler descrição</h1>
-                <img src="/images/seta.png" alt="" />
-              </div>
-              <div class="setas">
-                <img class="prox" src="/images/voltar.png" alt="" />
-                <img class="prox" src="/images/retornar.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+    <section id="btnfrase" class="frasedodia">
+      <img src="images/Lampada.png" alt="" />
+      <div class="title">
+        <h1>Frase do dia</h1>
+        <p>
+          Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você
+          quer conquistar o mundo, acredite em você porque Deus já te deu tudo o
+          que você precisa para você vencer.
+        </p>
       </div>
     </section>
 
+    <section class="janelafrase">
+      <div class="background background-frase"></div>
+      <div class="frasebox">
+        <div>
+          <img src="images/Lampada.png" alt="" />
+          <h1>Frase do dia</h1>
+          <img class="frasefechar" src="/images/BotaoFechar.png" alt="" />
+        </div>
+        <p>
+          Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você
+          quer conquistar o mundo, acredite em você porque Deus já te deu tudo o
+          que você precisa para você vencer.
+        </p>
+      </div>
+    </section>
+
+    <section class="novatask" id="janelaadd">
+      <div class="background background-nova"></div>
+      <form class="criartask">
+        <h1 class="titulo">Nova Task</h1>
+        <img id="btnfechar" src="/images/BotaoFechar.png" alt="" />
+        <h1 class="titulotask">Título *</h1>
+        <input id="input" type="text" required />
+        <h1>Descrição</h1>
+        <textarea id="inputdesc" class="descricao"></textarea>
+        <input id="submit" type="submit" value="Criar Task" />
+      </form>
+    </section>
+
+    <section class="centro">
+      <img class="seta-esquerda setaed" src="/images/arrows.png" alt="" />
+      <div class="meio carrossel">
+        <div class="container-slide">
+          <div class="add">
+            <h1>A fazer</h1>
+            <img id="btnadd" src="/images/adicionar.png" alt="" />
+          </div>
+          <div id="afazer" class="tasks"></div>
+        </div>
+
+        <div class="container">
+          <h1>Em andamento</h1>
+          <div id="andamento" class="tasks"></div>
+        </div>
+
+        <div class="container">
+          <h1>Feito</h1>
+          <div id="feito" class="tasks"></div>
+        </div>
+      </div>
+      <img class="seta-direita setaed" src="/images/arrows.png" alt="" />
+    </section>
+
     <footer>
-      <h1 class="trainee">© Processo de Trainee Unect Jr. 2022.1</h1>
+      <h1 class="trainee">
+        © Processo de Trainee
+        <a href="https://unect.com.br/"><span>Unect Jr.</span></a> 2022.1
+      </h1>
       <div>
         <h1>Feito com</h1>
         <img src="/images/favorite.png" alt="Coração" />
         <h1>por <span>Pedro Rocha</span></h1>
       </div>
     </footer>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>

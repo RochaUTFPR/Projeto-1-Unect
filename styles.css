@@ -1,52 +1,150 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 button,
 input {
   border: 0;
   padding: 0;
+}
+
+button {
   cursor: pointer;
+}
+
+div::-webkit-scrollbar {
+  width: 10px;
+}
+
+div::-webkit-scrollbar-track {
+  background-color: #EEEEEE;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #c4c4c4;
+  border: 2px solid #EEEEEE;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #226ED8;
+  background-color: #226ed8;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
   padding: 20px 160px;
 
@@ -54,13 +152,13 @@ input {
 }
 
 .header h1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 45px;
 
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .header .switcher {
@@ -69,23 +167,58 @@ input {
   cursor: pointer;
 }
 
+.centro {
+  margin: 32px 160px;
+}
+
 .meio {
   display: flex;
   justify-content: space-between;
+}
+.meio .excluir {
+  cursor: pointer;
+}
 
-  margin: 120px 160px;
+.meio .excluir img {
+  width: 16px;
+  height: 16px;
+}
+
+.meio .excluir p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #df0000;
+}
+
+.meio .excluir {
+  position: absolute;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 7px;
+  gap: 3px;
+  margin-top: 50px;
+  display: none;
+}
+
+.meio .visible {
+  display: flex;
 }
 
 .meio h1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-
   display: flex;
   align-items: center;
-
   color: #141414;
 }
 
@@ -93,7 +226,7 @@ input {
   width: 293px;
   height: 337px;
 
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 10px;
 
   margin-top: 8px;
@@ -101,25 +234,24 @@ input {
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  overflow: auto;
 }
 
 .meio .task {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px;
-
   padding: 12px;
 }
 
 .task h1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-
   display: flex;
   align-items: center;
-
   color: #141414;
 }
 
@@ -136,29 +268,74 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .task .title img {
-  width: 4px;
-  height: 12px;
-
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 
 .task .ler {
   display: flex;
   justify-content: space-between;
-
   margin-top: 10px;
 }
 
 .task .ler div {
   display: flex;
-  align-items: center;
   gap: 6px;
+  flex-direction: column;
 }
 
-.task .ler .prox {
+.task .ler .setas {
+  flex-direction: row;
+}
+
+#afazer .ant {
+  display: none;
+}
+
+.task .ler p {
+  width: 163px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #141414;
+}
+
+.task .ler div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.task .ler div .descricaoseta {
+  display: none;
+}
+
+.task .ler div .mostrar {
+  display: block;
+}
+
+.mostrar img {
+  width: 12px;
+  height: 12px;
+}
+
+.ler div div .blue {
+  color: #002d6c;
+}
+
+.prox,
+.ant {
+  align-self: flex-end;
   width: 20px;
   height: 20px;
 }
@@ -169,19 +346,17 @@ input {
 }
 
 .task .ler h1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
-
   display: flex;
   align-items: center;
-
   color: #141414;
 }
 
-.title-feito{
+#feito .title h1 {
   text-decoration-line: line-through;
 }
 
@@ -197,18 +372,15 @@ footer {
   bottom: 0;
   display: flex;
   justify-content: space-between;
-  background: #114FA7;
-
-  font-family: 'Poppins';
+  background: #114fa7;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-
   display: flex;
   align-items: center;
-
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 footer span {
@@ -222,6 +394,7 @@ footer .trainee {
 
 footer div {
   display: flex;
+  align-items: center;
   margin-right: 160px;
   gap: 5px;
 }
@@ -229,4 +402,379 @@ footer div {
 footer img {
   width: 16px;
   height: 16px;
+}
+
+.frasedodia {
+  width: 620px;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  margin-left: 160px;
+  margin-top: 32px;
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.frasedodia img,
+.janelafrase img {
+  width: 44px;
+  height: 44px;
+}
+
+.frasedodia h1,
+.janelafrase h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #141414;
+}
+
+.frasedodia p,
+.janelafrase p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #141414;
+  margin-top: 6px;
+}
+
+.novatask .criartask {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 30px 50px 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.janelafrase {
+  display: none;
+}
+
+.frasefechar {
+  cursor: pointer;
+}
+
+.janelafrase .frasebox {
+  position: fixed;
+  left: calc(50%);
+  top: calc(50%);
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.frasebox div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+}
+
+.frasebox div .frasefechar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+}
+
+.janelafrase p {
+  margin-top: 8px;
+  width: 300px;
+}
+
+.criartask img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 50px;
+  cursor: pointer;
+}
+
+.criartask input,
+textarea {
+  padding: 10px 16px;
+  width: 374px;
+  background: #eeeeee;
+  border-radius: 10px;
+  height: 40px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  resize: none;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #141414;
+}
+
+.criartask .descricao {
+  height: 90px;
+  margin-bottom: 40px;
+}
+
+.novatask {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+.novatask .background,
+.janelafrase .background {
+  background: rgba(20, 20, 20, 0.4);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.novatask h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #141414;
+  margin-bottom: 6px;
+}
+
+.novatask .titulo {
+  font-size: 20px;
+  line-height: 30px;
+  color: #3867d6;
+  position: relative;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.novatask .titulo::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 3px;
+  left: -5%;
+  background-color: #3867d6;
+  border-radius: 10px;
+  bottom: 0;
+}
+
+.novatask .titulotask {
+  margin-top: 39px;
+}
+
+.novatask #submit {
+  background: linear-gradient(90.35deg, #4890f5 0%, #226ed8 99.7%);
+  border-radius: 20px;
+  padding: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.setaed {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .centro {
+    margin: 32px 30px;
+  }
+
+  .frasedodia {
+    margin-left: 30px;
+  }
+
+  .header {
+    padding: 20px 30px;
+  }
+
+  footer .trainee {
+    margin-left: 30px;
+  }
+
+  footer div {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .slick-initialized .slick-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add {
+    gap: 235px;
+  }
+
+  .centro {
+    position: relative;
+  }
+
+  .setaed {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .seta-direita {
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  .slick-dots {
+    display: flex;
+    gap: 14px;
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  li button {
+    background-color: #C4C4C4;
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    color: transparent;
+    border-radius: 6px;
+  }
+
+  .slick-active button {
+    background-color: #226ED8;
+  }
+
+  .setaed {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .frasedodia {
+    position: relative;
+    width: 333px;
+    height: 60px;
+    left: 50%;
+    transform: translate(-50%);
+
+    margin: 32px 0 0;
+    padding: 0;
+    background-color: #FFD569;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+  }
+
+  .frasedodia img {
+    margin-left: 22px;
+  }
+
+  .frasedodia p {
+    display: none;
+  }
+
+  .frasedodia h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.017em;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .mostrar {
+    display: block;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  footer .trainee {
+    margin: 13px 30px 0;
+  }
+
+  footer div {
+    display: flex;
+    align-items: center;
+    margin: 2px 30px 13px;
+  }
+
+  .novatask .criartask {
+    padding: 30px 30px 40px;
+  }
+
+  .criartask input, textarea {
+    width: 255px;
+  }
+
+  .criartask img {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .meio .tasks {
+    width: 70%;
+  }
+
+  .add {
+    width: 80%;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .meio .add h1 {
+    white-space: nowrap;
+  }
+
+  .meio .add img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  .frasedodia {
+    width: 70%; 
+  }
 }
